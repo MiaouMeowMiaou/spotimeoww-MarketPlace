@@ -1,26 +1,49 @@
-[
-  {
-    "id": "neon-punk",
-    "name": "Neon Punk",
-    "author": "ElChagnon",
-    "type": "theme",
-    "color": "#ff00ff",
-    "css": "body,html,.Root__main-view,.main-view-container__scroll-node-child,#main-view,section[data-testid=\"home-page\"]{background:#0a0a0a!important}div[data-testid=\"grid-container\"]>div,div[data-testid=\"card-container\"]{background:rgba(255,0,255,0.05)!important;border:1px solid #ff00ff!important;box-shadow:0 0 10px rgba(255,0,255,0.2)!important;border-radius:0!important}h1,h2,h3,span,p{color:#0ff!important;text-shadow:0 0 5px #0ff!important}button[data-testid=\"play-button\"]{background:#ff00ff!important;border-radius:0!important;box-shadow:0 0 15px #ff00ff!important}button[data-testid=\"play-button\"] *{fill:#0a0a0a!important}aside[data-testid=\"now-playing-bar\"]{background:rgba(10,10,10,0.9)!important;border-top:1px solid #0ff!important;box-shadow:0 -5px 20px rgba(0,255,255,0.2)!important;border-radius:0!important}form[role=\"search\"] input{border-radius:0!important;border:1px solid #ff00ff!important;background:rgba(255,0,255,0.05)!important}"
-  },
-  {
-    "id": "hacker-mode",
-    "name": "Hacker Mode",
-    "author": "ElChagnon",
-    "type": "theme",
-    "color": "#00ff00",
-    "css": "body,html,.Root__main-view,.main-view-container__scroll-node-child,#main-view,section[data-testid=\"home-page\"]{background:#000!important;font-family:monospace!important}div[data-testid=\"grid-container\"]>div,div[data-testid=\"card-container\"]{background:transparent!important;border:1px dashed #00ff00!important;border-radius:0!important}h1,h2,h3,span,p{color:#00ff00!important}button[data-testid=\"play-button\"]{background:#000!important;border:1px solid #00ff00!important;border-radius:0!important}button[data-testid=\"play-button\"] *{fill:#00ff00!important}aside[data-testid=\"now-playing-bar\"]{background:#000!important;border-top:1px dashed #00ff00!important;border-radius:0!important}form[role=\"search\"] input{border-radius:0!important;border:1px dashed #00ff00!important;background:#000!important;color:#00ff00!important;font-family:monospace!important}"
-  },
-  {
-    "id": "fun-lyrics",
-    "name": "Bouton Paroles Magique",
-    "author": "ElChagnon",
-    "type": "extension",
-    "desc": "Affiche une alerte rigolote quand on essaie d'ouvrir les paroles.",
-    "js": "let lp = setInterval(() => { let btn = document.querySelector('button[data-testid=\"lyrics-button\"]'); if(btn && !btn.hasAttribute('data-magique')) { btn.setAttribute('data-magique','1'); btn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); alert('Oups! Les paroles sont parties en vacances 🏖️'); }); } }, 2000);"
-  }
-]
+{
+  "themes": [
+    {
+      "name": "Classique Spotify",
+      "author": "Miaou",
+      "color": "#1db954",
+      "desc": "Le thème vert iconique original de Spotify.",
+      "css": ""
+    },
+    {
+      "name": "Rouge SpotiMeoww",
+      "author": "Miaou",
+      "color": "#fa233b",
+      "desc": "Le thème rouge vif par défaut de SpotiMeoww.",
+      "css": ""
+    },
+    {
+      "name": "Dracula",
+      "author": "Community",
+      "color": "#ff79c6",
+      "desc": "Un thème sombre avec des accents roses et violets inspiré par le fameux thème Dracula.",
+      "css": "body, html, #main-view { background-color: #282a36 !important; } .Root__nav-bar { background: #1e1f29 !important; } aside[data-testid=now-playing-bar] { background: rgba(40, 42, 54, 0.95) !important; border-color: rgba(255, 121, 198, 0.3) !important; } span, div, h1, h2, h3 { color: #f8f8f2 !important; } .encore-text-body-small { color: #6272a4 !important; } div[data-testid=tracklist-row]:active { background: rgba(98, 114, 164, 0.3) !important; }"
+    },
+    {
+      "name": "Cyberpunk Neon",
+      "author": "Community",
+      "color": "#fcee0a",
+      "desc": "Plongez dans le futur avec ce thème Cyberpunk jaune néon et cyan foncé.",
+      "css": "body, html, #main-view { background-color: #0b0c10 !important; } aside[data-testid=now-playing-bar] { background: rgba(11, 12, 16, 0.95) !important; border: 1px solid #00f0ff !important; box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); } button[data-testid=play-button] { background-color: #fcee0a !important; } button[data-testid=play-button] * { fill: #000 !important; } span, h1, h2 { color: #00f0ff !important; text-shadow: 0 0 5px rgba(0,240,255,0.5) !important; } .encore-text-body-small { color: #c5c6c7 !important; }"
+    },
+    {
+      "name": "Discord Blurple",
+      "author": "Community",
+      "color": "#5865F2",
+      "desc": "Un thème relaxant utilisant les couleurs de Discord.",
+      "css": "body, html, #main-view { background-color: #36393f !important; } aside[data-testid=now-playing-bar] { background: rgba(47, 49, 54, 0.95) !important; border-color: rgba(255,255,255,0.05) !important; } .Root__nav-bar { background: #2f3136 !important; } span, div, h1, h2 { color: #dcddde !important; } .encore-text-body-small { color: #8e9297 !important; } form[role=search] input { background-color: #202225 !important; border: none !important; }"
+    }
+  ],
+  "extensions": [
+    {
+      "id": "ext_lyrics_glow",
+      "name": "Glow sur les Paroles",
+      "author": "Community",
+      "version": "1.0",
+      "desc": "Ajoute un effet de brillance dynamique sur les paroles lorsqu'elles défilent.",
+      "js": "let s=document.createElement('style');s.textContent='div[data-testid=lyrics-fullscreen-container] span.lyrics-line-active { text-shadow: 0 0 10px var(--theme-color), 0 0 20px var(--theme-color); transition: text-shadow 0.3s ease; }';document.head.appendChild(s);"
+    }
+  ]
+}
