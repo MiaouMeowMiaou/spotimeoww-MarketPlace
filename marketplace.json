@@ -34,6 +34,13 @@
       "color": "#5865F2",
       "desc": "Un thème relaxant utilisant les couleurs de Discord.",
       "css": "body, html, #main-view { background-color: #36393f !important; } aside[data-testid=now-playing-bar] { background: rgba(47, 49, 54, 0.95) !important; border-color: rgba(255,255,255,0.05) !important; } .Root__nav-bar { background: #2f3136 !important; } span, div, h1, h2 { color: #dcddde !important; } .encore-text-body-small { color: #8e9297 !important; } form[role=search] input { background-color: #202225 !important; border: none !important; }"
+    },
+    {
+      "name": "Sakura Pink",
+      "author": "Community",
+      "color": "#ffb7c5",
+      "desc": "Un thème doux et rose inspiré des cerisiers en fleurs (Sakura).",
+      "css": "body, html, #main-view { background-color: #2a1b21 !important; } aside[data-testid=now-playing-bar] { background: rgba(42, 27, 33, 0.95) !important; border-color: rgba(255,183,197,0.3) !important; } span, div, h1, h2, h3 { color: #ffe6eb !important; } .encore-text-body-small { color: #ffb7c5 !important; }"
     }
   ],
   "extensions": [
@@ -44,6 +51,14 @@
       "version": "1.0",
       "desc": "Ajoute un effet de brillance dynamique sur les paroles lorsqu'elles défilent.",
       "js": "let s=document.createElement('style');s.textContent='div[data-testid=lyrics-fullscreen-container] span.lyrics-line-active { text-shadow: 0 0 10px var(--theme-color), 0 0 20px var(--theme-color); transition: text-shadow 0.3s ease; }';document.head.appendChild(s);"
+    },
+    {
+      "id": "ext_circular_covers",
+      "name": "Pochettes Circulaires",
+      "author": "Miaou",
+      "version": "1.0",
+      "desc": "Transforme toutes les pochettes d'albums en cercles.",
+      "js": "let s=document.createElement('style');s.textContent='img[data-testid=cover-art-image] { border-radius: 50% !important; }';document.head.appendChild(s);"
     }
   ]
 }
