@@ -55,6 +55,13 @@
       "color": "#ff007f",
       "desc": "Retour dans les années 80 avec ce thème néon rose et bleu avec des ombres portées intenses.",
       "css": "body, html, #main-view { background: linear-gradient(to bottom, #20003b, #000000) !important; } aside[data-testid=now-playing-bar] { background: rgba(0,0,0,0.85) !important; border-top: 2px solid #ff007f !important; box-shadow: 0 0 20px rgba(255,0,127,0.5); } span, h1, h2, h3 { color: #00ffff !important; text-shadow: 0 0 5px rgba(0,255,255,0.7); } img[data-testid=cover-art-image] { border: 2px solid #ff007f; border-radius: 12px; box-shadow: 0 0 10px rgba(255,0,127,0.6); } button[data-testid=play-button] { background: #ff007f !important; box-shadow: 0 0 15px #ff007f; } button[data-testid=play-button] * { fill: #000 !important; } .encore-text-body-small { color: #ffb3d9 !important; text-shadow: none; }"
+    },
+    {
+      "name": "Dribbblish Mint",
+      "author": "Miaou",
+      "color": "#00e676",
+      "desc": "Thème inspiré du screenshot : gris sombre et accents menthe intenses.",
+      "css": ":root { --background-base: #1e2124 !important; --background-highlight: #282b30 !important; --background-elevated-base: #282b30 !important; --text-base: #ffffff !important; --text-subdued: #b9bbbe !important; --essential-base: #00e676 !important; } body, html, #main-view { background-color: var(--background-base) !important; } aside[data-testid=now-playing-bar], .Root__nav-bar { background-color: var(--background-highlight) !important; border-top: 1px solid rgba(255,255,255,0.05); } a[aria-current=page] { background-color: #00e676 !important; border-radius: 8px !important; } a[aria-current=page] * { color: #000 !important; fill: #000 !important; } button[data-testid=play-button] { background-color: #00e676 !important; } button[data-testid=play-button] * { fill: #000 !important; }"
     }
   ],
   "extensions": [
@@ -73,6 +80,14 @@
       "version": "1.0",
       "desc": "Transforme toutes les pochettes d'albums en cercles.",
       "js": "let s=document.createElement('style');s.textContent='img[data-testid=cover-art-image] { border-radius: 50% !important; }';document.head.appendChild(s);"
+    },
+    {
+      "id": "ext_browse_cards",
+      "name": "Cartes Style 'Browse'",
+      "author": "Miaou",
+      "version": "1.0",
+      "desc": "Transforme les cartes d'albums en gros carrés colorés avec l'image inclinée, comme sur la page de recherche !",
+      "js": "setInterval(()=>{ document.querySelectorAll('div[data-testid=card-click-handler]:not(.browse-styled), section[data-testid=component-shelf] > div > div:not(.browse-styled)').forEach((c,i)=>{ c.classList.add('browse-styled'); const colors=['#27856a','#1e3264','#8d67ab','#e8115b','#e13300','#1db954','#148a08','#8400e7']; c.style.backgroundColor=colors[i%colors.length]; c.style.borderRadius='8px'; c.style.padding='16px'; c.style.height='180px'; c.style.minWidth='150px'; c.style.position='relative'; c.style.overflow='hidden'; let title=c.querySelector('div, span'); if(title) { title.style.color='#fff'; title.style.fontSize='20px'; title.style.fontWeight='bold'; title.style.position='absolute'; title.style.top='16px'; title.style.left='16px'; title.style.zIndex='2'; } let img=c.querySelector('img'); if(img){ let p=img.parentElement; p.style.position='absolute'; p.style.bottom='-15px'; p.style.right='-20px'; p.style.width='90px'; p.style.height='90px'; p.style.transform='rotate(25deg)'; p.style.boxShadow='0 5px 10px rgba(0,0,0,0.5)'; } }); }, 1500);"
     }
   ]
 }
