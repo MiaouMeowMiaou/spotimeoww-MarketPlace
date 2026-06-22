@@ -41,6 +41,20 @@
       "color": "#ffb7c5",
       "desc": "Un thème doux et rose inspiré des cerisiers en fleurs (Sakura).",
       "css": "body, html, #main-view { background-color: #2a1b21 !important; } aside[data-testid=now-playing-bar] { background: rgba(42, 27, 33, 0.95) !important; border-color: rgba(255,183,197,0.3) !important; } span, div, h1, h2, h3 { color: #ffe6eb !important; } .encore-text-body-small { color: #ffb7c5 !important; }"
+    },
+    {
+      "name": "Aero Glass (Blur)",
+      "author": "Miaou",
+      "color": "#4da6ff",
+      "desc": "Un thème ultra moderne avec des effets de transparence et de flou givré (Glassmorphism).",
+      "css": "body, html, #main-view { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important; } .Root__nav-bar, aside[data-testid=now-playing-bar] { background: rgba(255, 255, 255, 0.08) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; border-top: 1px solid rgba(255, 255, 255, 0.15) !important; } div[data-testid=tracklist-row]:hover { background: rgba(255, 255, 255, 0.15) !important; border-radius: 10px; } span, div, h1, h2 { color: #fff !important; } .encore-text-body-small { color: #d1d1d1 !important; }"
+    },
+    {
+      "name": "Synthwave 80s",
+      "author": "Miaou",
+      "color": "#ff007f",
+      "desc": "Retour dans les années 80 avec ce thème néon rose et bleu avec des ombres portées intenses.",
+      "css": "body, html, #main-view { background: linear-gradient(to bottom, #20003b, #000000) !important; } aside[data-testid=now-playing-bar] { background: rgba(0,0,0,0.85) !important; border-top: 2px solid #ff007f !important; box-shadow: 0 0 20px rgba(255,0,127,0.5); } span, h1, h2, h3 { color: #00ffff !important; text-shadow: 0 0 5px rgba(0,255,255,0.7); } img[data-testid=cover-art-image] { border: 2px solid #ff007f; border-radius: 12px; box-shadow: 0 0 10px rgba(255,0,127,0.6); } button[data-testid=play-button] { background: #ff007f !important; box-shadow: 0 0 15px #ff007f; } button[data-testid=play-button] * { fill: #000 !important; } .encore-text-body-small { color: #ffb3d9 !important; text-shadow: none; }"
     }
   ],
   "extensions": [
